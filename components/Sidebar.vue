@@ -44,6 +44,11 @@
       </ul>
     </section>
 
+    <section v-if="$themeConfig.seo.twitterSite.length" class="block twitter-timeline">
+      <h3 class="mt-0 mb-5">{{ $themeConfig.seo.twitterSite }} on Twitter</h3>
+      <TwitterTimeline />
+    </section>
+
     <section v-for="block in additionalBlocks" class="block additional-block">
       <h3 class="mt-0 mb-5">{{ block.title }}</h3>
       <ul>
@@ -66,11 +71,13 @@
   import sortBy from 'lodash/sortBy'
   import SearchBox from '@SearchBox'
   import SnsLinks from '@theme/components/SnsLinks'
+  import TwitterTimeline from '@theme/components/TwitterTimeline'
 
   export default {
     components: {
       SearchBox,
       SnsLinks,
+      TwitterTimeline,
     },
     created() {
       // profile

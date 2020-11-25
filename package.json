@@ -38,6 +38,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-scrollactive": "^0.8.0",
+    "vue-tweet-embed": "^2.4.0",
     "vuepress": "^1.4.1",
     "vuepress-plugin-seo": "^0.1.2",
     "vuetify": "^2.2.25"
