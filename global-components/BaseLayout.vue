@@ -81,3 +81,7 @@
     },
   }
 </script>
+
+<style lang="scss">
+  @import '../styles/index';
+</style>
