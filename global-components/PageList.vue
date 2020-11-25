@@ -6,27 +6,6 @@
       <PageSummary :page="page" class="page-summary" />
     </div>
 
-    <div v-if="$cpt.posts">
-      <router-link
-        v-for="item of $cpt.posts"
-        v-if="item && item.path"
-        v-bind:to="item.path">
-        <div
-          v-if="item.taxonomys"
-          v-for="taxonomy of item.taxonomys"
-          v-on:click:stop.prevent>
-          <span>{{ taxonomy.indexPage.label }}:</span>
-          <router-link
-            v-for="category of taxonomy.list"
-            v-bind:to="category.path"
-            v-text="category.name" />
-        </div>
-        <h2 v-if="item.title" v-text="item.title" />
-        <div v-if="item.frontmatter.date" v-text="item.frontmatter.date" />
-        <div v-if="item.frontmatter.description" v-text="item.frontmatter.description" />
-      </router-link>
-    </div>
-
     <component :is="beforePaginationComponent" />
 
     <component

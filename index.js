@@ -128,21 +128,6 @@ module.exports = (option, ctx) => {
       ],
     },
 
-    registerPostTypes: {
-      news: {
-        // label: 'News',
-        postsDir: '_posts-news',
-        // posts: {
-        //   layout: 'News',
-        // },
-        // taxonomys: {
-        //   category: true,
-        //   tag: true,
-        //   author: true
-        // }
-      }
-    },
-
     sitemap: true,
 
     feed: {
@@ -302,14 +287,6 @@ module.exports = (option, ctx) => {
   }
 
   /**
-   * Configure vuepress-plugin-cpt
-   *
-   * @see https://github.com/tmiame/vuepress-plugin-cpt
-   */
-
-  const registerPostTypes = themeConfig.registerPostTypes;
-
-  /**
    * Integrate plugins
    */
 
@@ -329,7 +306,6 @@ module.exports = (option, ctx) => {
       before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
       after: () => '</details>\n'
     }],
-    ['vuepress-plugin-cpt', registerPostTypes],
   ]
 
   if (themeConfig.ga) {
