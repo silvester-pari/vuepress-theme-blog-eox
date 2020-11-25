@@ -103,6 +103,7 @@ module.exports = (option, ctx) => {
       instagram: '',
       github: '',
       youtube: '',
+      linkedin: '',
       feed: '/rss.xml',
       order: [
         'twitter',

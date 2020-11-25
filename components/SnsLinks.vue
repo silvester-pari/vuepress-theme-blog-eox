@@ -32,6 +32,7 @@
         twitter: 'fab fa-twitter',
         facebook: 'fab fa-facebook-square',
         instagram: 'fab fa-instagram',
+        linkedin: 'fab fa-linkedin',
         github: 'fab fa-github',
         youtube: 'fab fa-youtube',
         feed: 'fa fa-rss',
