@@ -1,27 +1,6 @@
 <template>
   <v-app class="component-base-layout">
-    <v-app-bar
-      app
-      fixed
-      elevate-on-scroll
-    >
-      <v-container class="d-flex align-center">
-        <v-toolbar-title
-          class="mr-auto d-flex align-center"
-          style="cursor:pointer"
-          @click="navigate('/')"
-        >
-          <div v-html="$themeConfig.titleHtml" class="site-title" />
-        </v-toolbar-title>
-        <v-btn
-          class="d-block d-md-none"
-          icon
-          @click="drawer = !drawer"
-        >
-          <v-icon>mdi-menu</v-icon>
-        </v-btn>
-      </v-container>
-    </v-app-bar>
+    <Header @toggleSidebar="drawer = !drawer" />
 
     <v-navigation-drawer
       v-model="drawer"
@@ -67,11 +46,13 @@
 </template>
 
 <script>
+  import Header from '@theme/components/Header'
   import Sidebar from '@theme/components/Sidebar'
   import Footer from '@theme/components/Footer'
 
   export default {
     components: {
+      Header,
       Sidebar,
       Footer,
     },

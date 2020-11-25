@@ -59,6 +59,14 @@ module.exports = (option, ctx) => {
 
     titleHtml: `<strong>${siteConfig.title}</strong>`,
 
+    header: {
+      links: [
+        // { label: 'About', path: '/about' },
+        // { label: 'Contact', path: '/contact' },
+        // { label: 'External Page', url: 'https://example.com'}
+      ],
+    },
+
     sidebar: {
       directoryIds: ['post'],
       profile: {
