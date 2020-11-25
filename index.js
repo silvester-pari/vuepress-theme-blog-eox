@@ -129,15 +129,18 @@ module.exports = (option, ctx) => {
     },
 
     customPostTypes: {
-      // news: {
-      //   label: 'News',
-      //   postsDir: '_posts-news',
-      //   taxonomys: {
-      //     category: true,
-      //     tag: true,
-      //     author: true
-      //   }
-      // }
+      news: {
+        label: 'News',
+        postsDir: '_posts-news',
+        posts: {
+          layout: 'News',
+        },
+        taxonomys: {
+          category: true,
+          tag: true,
+          author: true
+        }
+      }
     },
 
     sitemap: true,
