@@ -1,10 +1,7 @@
 <template>
   <BaseLayout>
     <template #content>
-      <component :is="customListContent"
-        :pagination="$pagination"
-        :page="$page"
-      />
+      <component :is="customListContent" />
     </template>
     <template #sticky>
       <Sticky />
