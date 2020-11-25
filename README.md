@@ -9,3 +9,14 @@ $ yarn add --dev vuepress-theme-blog-eox
 # or
 $ npm install -D vuepress-theme-blog-eox
 ```
+
+## Usage
+
+```js
+// .vuepress/config.js
+module.exports = {
+  theme: 'blog-eox',
+  themeConfig: {
+    // ...
+  }
+}
