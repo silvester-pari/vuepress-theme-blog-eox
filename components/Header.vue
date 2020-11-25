@@ -4,19 +4,19 @@
     fixed
     elevate-on-scroll
   >
-    <v-container class="d-flex align-space-between">
-      <ul class="d-flex flex-wrap mr-auto my-4 my-sm-0">
-        <li v-for="(link, index) in links" :key="index" class="d-flex justify-center mx-0">
+    <v-container class="d-flex justify-space-between fill-height">
+      <ul class="d-flex flex-wrap my-4 my-sm-0">
+        <li v-for="(link, index) in links" :key="index" class="d-flex justify-center mr-3">
           <router-link v-if="link.path" :to="link.path">{{ link.label }}</router-link>
           <a v-else-if="link.url" :href="link.url" target="link.target">{{ link.label }}</a>
         </li>
       </ul>
       <v-toolbar-title
-        class="mr-auto d-flex align-center"
+        class="d-flex align-center fill-height"
         style="cursor:pointer"
         @click="navigate('/')"
       >
-        <div v-html="$themeConfig.titleHtml" class="site-title" />
+        <div v-html="$themeConfig.titleHtml" class="site-title fill-height" />
       </v-toolbar-title>
       <v-btn
         class="d-block d-md-none"
@@ -44,3 +44,33 @@
     }),
   }
 </script>
+
+<style lang="scss" scoped>
+  @import '../styles/index';
+
+  .site-title {
+    color: $color-app-bar-title;
+    i {
+      color: $color-app-bar-title !important;
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 0 !important;
+
+    li {
+      a {
+        @include unstyled-link;
+        color: $color-brand !important;
+        text-decoration: none !important;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 1em;
+      }
+    }
+  }
+</style>

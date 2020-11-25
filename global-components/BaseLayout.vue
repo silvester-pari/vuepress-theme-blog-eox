@@ -77,16 +77,3 @@
     },
   }
 </script>
-
-<style lang="scss">
-  @import '../styles/index';
-
-  .component-base-layout {
-    .site-title {
-      color: $color-app-bar-title;
-      i {
-        color: $color-app-bar-title !important;
-      }
-    }
-  }
-</style>
