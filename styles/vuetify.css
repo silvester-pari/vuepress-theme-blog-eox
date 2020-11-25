@@ -5388,23 +5388,23 @@
   width: 100%;
   height: 100%;
 }
-.v-content {
+.v-main {
   display: flex;
   flex: 1 0 auto;
   max-width: 100%;
   transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.v-content:not([data-booted=true]) {
+.v-main:not([data-booted=true]) {
   transition: none !important;
 }
-.v-content__wrap {
+.v-main__wrap {
   flex: 1 1 auto;
   max-width: 100%;
   position: relative;
 }
 @-moz-document url-prefix() {
   @media print {
-    .v-content {
+    .v-main {
       display: block;
     }
   }

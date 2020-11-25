@@ -24,7 +24,7 @@
       <Sidebar />
     </v-navigation-drawer>
 
-    <v-content>
+    <v-main>
       <v-container>
         <div class="d-md-flex">
           <div id="content">
@@ -38,7 +38,7 @@
           </aside>
         </div>
       </v-container>
-    </v-content>
+    </v-main>
 
     <Footer />
 
