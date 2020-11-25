@@ -14,7 +14,7 @@
       <v-toolbar-title
         class="d-flex align-center fill-height"
         style="cursor:pointer"
-        @click="$router.push('/')"
+        @click="$router.push('/').catch(err => {})"
       >
         <div v-html="$themeConfig.titleHtml" class="site-title fill-height" />
       </v-toolbar-title>
