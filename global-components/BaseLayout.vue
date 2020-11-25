@@ -42,6 +42,8 @@
 
     <Footer />
 
+    <ScrollTop />
+
   </v-app>
 </template>
 
@@ -49,12 +51,14 @@
   import Header from '@theme/components/Header'
   import Sidebar from '@theme/components/Sidebar'
   import Footer from '@theme/components/Footer'
+  import ScrollTop from '@theme/components/ScrollTop'
 
   export default {
     components: {
       Header,
       Sidebar,
       Footer,
+      ScrollTop,
     },
     mounted() {
       window.addEventListener('resize', e => {
