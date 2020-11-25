@@ -21,6 +21,7 @@ import DefaultBeforePage from './components/extensions/BeforePage'
 import DefaultBeforePageSection from './components/extensions/BeforePageSection'
 import DefaultAfterPage from './components/extensions/AfterPage'
 import DefaultAfterFooter from './components/extensions/AfterFooter'
+import CustomList from './components/extensions/CustomListContent'
 
 // @see https://vuepress.vuejs.org/theme/writing-a-theme.html#app-level-enhancements
 export default ({
@@ -51,4 +52,6 @@ export default ({
   Vue.component('DefaultBeforePageSection', DefaultBeforePageSection)
   Vue.component('DefaultAfterPage', DefaultAfterPage)
   Vue.component('DefaultAfterFooter', DefaultAfterFooter)
+
+  Vue.component('CustomList', CustomList)
 }

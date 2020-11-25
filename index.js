@@ -157,6 +157,8 @@ module.exports = (option, ctx) => {
       beforePageSection: 'DefaultBeforePageSection',
       afterPage: 'DefaultAfterPage',
       afterFooter: 'DefaultAfterFooter',
+      afterFooter: 'DefaultAfterFooter',
+      customList: 'CustomList',
     },
   })
 
