@@ -39,6 +39,7 @@
     "sass-loader": "^8.0.2",
     "vue-scrollactive": "^0.8.0",
     "vuepress": "^1.4.1",
+    "vuepress-plugin-cpt": "^1.0.2",
     "vuepress-plugin-seo": "^0.1.2",
     "vuetify": "^2.2.25"
   }
