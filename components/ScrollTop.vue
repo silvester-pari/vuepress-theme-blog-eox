@@ -31,3 +31,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @import '../styles/variables';
+
+  button {
+    outline: none;
+
+    &.primary {
+      background-color: $color-brand !important;
+      border-color: $color-brand !important;
+    }
+  }
+</style>
