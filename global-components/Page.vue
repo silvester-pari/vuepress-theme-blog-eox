@@ -4,7 +4,7 @@
 
     <header class="mb-12">
       <div v-if="typeof page.frontmatter.coverImage !== 'undefined'" >
-        <img :src="`/images/${page.frontmatter.coverImage}" alt="" />
+        <img :src="`/images/${page.frontmatter.coverImage}`" alt="" />
       </div>
 
       <h1 class="mt-2 mb-3">{{ page.title }}</h1>
