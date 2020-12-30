@@ -2,7 +2,9 @@
   <article :key="page.key" class="component-page-summary">
     <header class="mb-1">
       <div v-if="typeof page.frontmatter.coverImage !== 'undefined'" >
-        <img :src="`/images/${page.frontmatter.coverImage}`" alt="" />
+        <router-link :to="page.path">
+          <img :src="`/images/${page.frontmatter.coverImage}`" alt="" width="100%" height="auto" />
+        </router-link>
       </div>
 
       <h2 class="mt-1 mb-2">
