@@ -3,8 +3,8 @@
     <component :is="beforePageComponent" />
 
     <header class="mb-12">
-      <div v-if="typeof post.frontmatter.coverImage !== 'undefined'" >
-        <img :src="post.frontmatter.coverImage" alt="" />
+      <div v-if="typeof page.frontmatter.coverImage !== 'undefined'" >
+        <img :src="page.frontmatter.coverImage" alt="" />
       </div>
 
       <h1 class="mt-2 mb-3">{{ page.title }}</h1>
