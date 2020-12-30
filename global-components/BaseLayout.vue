@@ -50,6 +50,7 @@
 </template>
 
 <script>
+  import Vue from 'vue'
   import Header from '@theme/components/Header'
   import Sidebar from '@theme/components/Sidebar'
   import Footer from '@theme/components/Footer'
