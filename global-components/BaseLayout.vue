@@ -24,6 +24,8 @@
       <Sidebar />
     </v-navigation-drawer>
 
+    <LandingHeader />
+
     <v-main>
       <v-container>
         <div class="d-md-flex">
@@ -49,6 +51,7 @@
 
 <script>
   import Header from '@theme/components/Header'
+  import LandingHeader from '@theme/components/LandingHeader'
   import Sidebar from '@theme/components/Sidebar'
   import Footer from '@theme/components/Footer'
   import ScrollTop from '@theme/components/ScrollTop'
@@ -56,6 +59,7 @@
   export default {
     components: {
       Header,
+      LandingHeader,
       Sidebar,
       Footer,
       ScrollTop,
