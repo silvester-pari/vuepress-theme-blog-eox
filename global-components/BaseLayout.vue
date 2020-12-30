@@ -24,7 +24,7 @@
       <Sidebar />
     </v-navigation-drawer>
 
-    <component :is="landingHeaderComponent" />
+    <component v-if="$route.path === '/'" :is="landingHeaderComponent" />
 
     <v-main>
       <v-container>
