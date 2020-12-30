@@ -3,6 +3,12 @@
     <component :is="beforePageComponent" />
 
     <header class="mb-12">
+      <div v-if="typeof post.frontmatter.coverImage !== 'undefined'" >
+        <img :src="post.frontmatter.coverImage" alt="" />
+      </div>
+
+      <h1 class="mt-2 mb-3">{{ page.title }}</h1>
+
       <div class="metadata">
         <div class="d-flex">
           <div v-if="page.frontmatter.date" class="published-at">
@@ -28,8 +34,6 @@
           </div>
         </div>
       </div>
-
-      <h1 class="mt-2 mb-3">{{ page.title }}</h1>
 
       <div v-if="this.tags.length" class="tags">
         <v-chip
