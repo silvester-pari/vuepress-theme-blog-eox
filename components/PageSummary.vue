@@ -1,6 +1,14 @@
 <template>
   <article :key="page.key" class="component-page-summary">
     <header class="mb-1">
+      <div v-if="typeof page.frontmatter.coverImage !== 'undefined'" >
+        <img :src="`/images/${page.frontmatter.coverImage}`" alt="" />
+      </div>
+
+      <h2 class="mt-1 mb-2">
+        <router-link :to="page.path">{{ page.title }}</router-link>
+      </h2>
+
       <div class="metadata">
         <div class="d-flex">
           <div v-if="page.frontmatter.date" class="published-at">
@@ -26,11 +34,6 @@
           </div>
         </div>
       </div>
-
-
-      <h2 class="mt-1 mb-2">
-        <router-link :to="page.path">{{ page.title }}</router-link>
-      </h2>
 
       <div v-if="this.tags.length" class="tags">
         <v-chip
