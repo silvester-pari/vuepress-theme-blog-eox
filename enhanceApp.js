@@ -22,7 +22,7 @@ import DefaultBeforePageSection from './components/extensions/BeforePageSection'
 import DefaultAfterPage from './components/extensions/AfterPage'
 import DefaultAfterFooter from './components/extensions/AfterFooter'
 import CustomList from './components/extensions/CustomListContent'
-import LandingHeader from './components/extensions/LandingHeader'
+import DefaultLandingHeader from './components/extensions/LandingHeader'
 
 // @see https://vuepress.vuejs.org/theme/writing-a-theme.html#app-level-enhancements
 export default ({
@@ -55,5 +55,5 @@ export default ({
   Vue.component('DefaultAfterFooter', DefaultAfterFooter)
 
   Vue.component('CustomList', CustomList)
-  Vue.component('LandingHeader', LandingHeader)
+  Vue.component('DefaultLandingHeader', DefaultLandingHeader)
 }

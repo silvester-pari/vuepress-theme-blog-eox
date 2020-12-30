@@ -159,7 +159,7 @@ module.exports = (option, ctx) => {
       afterFooter: 'DefaultAfterFooter',
       afterFooter: 'DefaultAfterFooter',
       customList: 'CustomList',
-      landingHeader: 'LandingHeader',
+      landingHeader: 'DefaultLandingHeader',
     },
   })
 

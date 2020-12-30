@@ -24,7 +24,7 @@
       <Sidebar />
     </v-navigation-drawer>
 
-    <LandingHeader />
+    <component :is="landingHeaderComponent" />
 
     <v-main>
       <v-container>
@@ -51,7 +51,6 @@
 
 <script>
   import Header from '@theme/components/Header'
-  import LandingHeader from '@theme/components/extensions/LandingHeader'
   import Sidebar from '@theme/components/Sidebar'
   import Footer from '@theme/components/Footer'
   import ScrollTop from '@theme/components/ScrollTop'
@@ -59,10 +58,12 @@
   export default {
     components: {
       Header,
-      LandingHeader,
       Sidebar,
       Footer,
       ScrollTop,
+    },
+    created() {
+      this.landingHeaderComponent = Vue.component(this.$themeConfig.components.landingHeader)
     },
     mounted() {
       window.addEventListener('resize', e => {
@@ -73,6 +74,7 @@
     },
     data: () => ({
       drawer: false,
+      landingHeaderComponent: null,
     }),
     methods: {
       navigate(path) {
