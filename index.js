@@ -334,6 +334,22 @@ module.exports = (option, ctx) => {
   }
 
   /**
+   * Apply user global.scss
+   */
+
+  validUserGlobalScssFileNames = ['global.scss']
+
+  writeTemp('_global.scss', '')
+
+  for (fileName of validUserGlobalScssFileNames) {
+    userGlobalScssFilePath = Path.resolve(sourceDir, `.vuepress/styles/${fileName}`)
+    if (Fs.existsSync(userGlobalScssFilePath)) {
+      writeTemp('_variables.scss', Fs.readFileSync(userGlobalScssFilePath))
+      break
+    }
+  }
+
+  /**
    * Extend page data
    *
    * @see https://vuepress.vuejs.org/plugin/option-api.html#extendpagedata
