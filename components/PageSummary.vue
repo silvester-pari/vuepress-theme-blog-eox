@@ -28,7 +28,7 @@
           <div v-if="page.frontmatter.author" class="author ml-3">
             <span class="name">
               <i class="fa fa-user"></i>
-              <router-link :to="`/author/${page.frontmatter.author}`">{{ getAuthorName(page.frontmatter.author) || page.frontmatter.author }}</router-link>
+              <router-link :to="`/author/${page.frontmatter.author}`">{{ authorName(page.frontmatter.author) || page.frontmatter.author }}</router-link>
             </span>
             <span v-if="page.frontmatter.location" class="location">
               in {{ page.frontmatter.location }}
@@ -76,7 +76,7 @@
       resolvePostDate(date) {
         return dayjs(date).format(this.$themeConfig.dateFormat)
       },
-      getAuthorName(authorId) {
+      authorName(authorId) {
         return this.getAuthorName(authorId)
       }
     },
