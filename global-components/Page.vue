@@ -65,11 +65,13 @@
 <script>
   import Vue from 'vue'
   import dayjs from 'dayjs'
+  import AuthorNameGetter from '@theme/mixins/AuthorNameGetter'
   import TagResolver from '@theme/mixins/TagResolver'
 
   export default {
     mixins: [
-      TagResolver,
+      AuthorNameGetter,
+      TagResolver
     ],
     props: {
       page: Object,
