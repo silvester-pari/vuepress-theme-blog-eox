@@ -35,7 +35,7 @@
     "lodash": "^4.17.15",
     "remove-markdown": "^0.3.0",
     "sass": "^1.26.5",
-    "sass-loader": "^10.1.0",
+    "sass-loader": "^8.0.2",
     "vue-scrollactive": "^0.8.0",
     "vuepress": "^1.4.1",
     "vuepress-plugin-seo": "^0.1.2",
