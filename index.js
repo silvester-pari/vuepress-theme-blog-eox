@@ -344,7 +344,7 @@ module.exports = (option, ctx) => {
   for (fileName of validUserGlobalScssFileNames) {
     userGlobalScssFilePath = Path.resolve(sourceDir, `.vuepress/styles/${fileName}`)
     if (Fs.existsSync(userGlobalScssFilePath)) {
-      writeTemp('_variables.scss', Fs.readFileSync(userGlobalScssFilePath))
+      writeTemp('_global.scss', Fs.readFileSync(userGlobalScssFilePath))
       break
     }
   }
