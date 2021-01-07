@@ -161,6 +161,8 @@ module.exports = (option, ctx) => {
       customList: 'CustomList',
       landingHeader: 'DefaultLandingHeader',
     },
+
+    smoothScroll: true,
   })
 
   // this enables to access to global computed $themeConfig
