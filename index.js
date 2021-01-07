@@ -198,7 +198,7 @@ module.exports = (option, ctx) => {
     resolvedFeedOptions = Object.assign({}, feedOptions, {
       canonical_base: themeConfig.seo.baseUrl,
       feeds: {
-        rss2: {enable: rss},
+        rss2: {enable: rss, file_name : 'feed/rss.xml',},
         atom1: {enable: atom},
         json1: {enable: json},
       },
